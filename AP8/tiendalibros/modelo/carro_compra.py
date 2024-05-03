@@ -1,13 +1,13 @@
 from modelo.item_compra import ItemCompra
 class CarroCompra:
     def __init__(self, item):
-        self.item = [ItemCompra([])]
+        self.item: list[ItemCompra] = [] #Lista vacía de ItemCompra
     # Defina metodo inicializador __init__(self)
 
     # Defina el metodo agregar_item
     def agregar_item(self, libro, cantidad): 
-        objeto = ItemCompra
-        self.item.append(objeto)
+        item_compra = ItemCompra(libro, cantidad) #Objeto item_compra
+        self.item.append(item_compra)
         return self.item 
 
     # Defina el metodo calcular_total
